@@ -1,7 +1,5 @@
 # NeuroPilot 🧠✈️
 
-# NeuroPilot
-
 **An ADHD‑aligned daily ritual app that turns 15 minutes into reliable executive function: Morning → Daytime → Evening.**
 
 ## 🚀 One‑liner
