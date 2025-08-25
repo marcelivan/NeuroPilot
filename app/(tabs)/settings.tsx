@@ -1,14 +1,22 @@
 import { View, Text, Pressable, Alert } from 'react-native';
 import * as StoreReview from 'expo-store-review';
-import { deleteAll } from '../../src/lib/db';
+import { deleteAll, ratePromptShown, rateAction } from '../../src/lib/db';
 
-export default function Settings(){
-  const rate = async () => { if (await StoreReview.hasAction()) { StoreReview.requestReview(); } };
+export default function Settings() {
+  const rate = async () => {
+    ratePromptShown();
+    if (await StoreReview.hasAction()) {
+      await StoreReview.requestReview();
+      rateAction();
+    }
+  };
   const feedback = () => { /* open mailto: or feedback form */ };
-  const wipe = () => Alert.alert('Delete account data', 'This removes local data. Continue?',[
-    { text: 'Cancel', style: 'cancel' },
-    { text: 'Delete', style: 'destructive', onPress: () => { deleteAll(); } }
-  ]);
+  const wipe = () =>
+    Alert.alert('Delete account data', 'This removes local data. Continue?', [
+      { text: 'Cancel', style: 'cancel' },
+      { text: 'Delete', style: 'destructive', onPress: () => { deleteAll(); } }
+    ]);
+
   return (
     <View style={{ padding: 16, gap: 24 }}>
       <Text style={{ fontSize: 28, fontWeight: '800' }}>Settings</Text>
