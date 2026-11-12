@@ -20,3 +20,5 @@ jobs:
       - run: npm run lint
       - run: npx expo install --check
       - run: npx expo-doctor
+      - run: npm audit --audit-level=high
+      - run: npx expo export --platform all
