@@ -14,7 +14,7 @@ jobs:
         with:
           # App runtime retained at Node 20 until Expo SDK 51 baseline tests are repaired and Node 24 compatibility is verified.
           node-version: 20
-          cache: 'npm'
+          # No lockfile exists yet; setup-node cache requires one.
       - run: npm ci || npm i
       - run: npx expo-cli --version || npx expo --version
       - run: npm run typecheck
