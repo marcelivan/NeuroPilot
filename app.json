@@ -1,7 +1,12 @@
 {
-  "plugins": [
-    "expo-router",
-    "expo-sqlite",
-    "expo-status-bar"
-  ]
+  "expo": {
+    "name": "NeuroPilot",
+    "slug": "neuro-pilot",
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-status-bar",
+      "expo-font"
+    ]
+  }
 }
