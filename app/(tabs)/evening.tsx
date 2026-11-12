@@ -11,10 +11,25 @@ export default function Evening() {
   }, []);
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24 }}>
-      <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 24 }}>Evening Review</Text>
-      <Text>Review wins, slips, lessons; note 3 struggle gratitudes and a shadow truth.</Text>
-      <Button title="Mark as Done" onPress={() => sessionId && markStep(sessionId, 'evening')} />
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 24,
+      }}
+    >
+      <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 24 }}>
+        Evening Review
+      </Text>
+      <Text>
+        Review wins, slips, lessons; note 3 struggle gratitudes and a shadow
+        truth.
+      </Text>
+      <Button
+        title="Mark as Done"
+        onPress={() => sessionId && markStep(sessionId, 'evening')}
+      />
     </View>
   );
 }

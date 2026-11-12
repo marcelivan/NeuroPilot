@@ -11,10 +11,25 @@ export default function Morning() {
   }, []);
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24 }}>
-      <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 24 }}>Morning Ritual</Text>
-      <Text>Silence timer, record 3 obstacles (with if-then plans), add Memento Mori, set your intention.</Text>
-      <Button title="Mark as Done" onPress={() => sessionId && markStep(sessionId, 'morning')} />
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 24,
+      }}
+    >
+      <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 24 }}>
+        Morning Ritual
+      </Text>
+      <Text>
+        Silence timer, record 3 obstacles (with if-then plans), add Memento
+        Mori, set your intention.
+      </Text>
+      <Button
+        title="Mark as Done"
+        onPress={() => sessionId && markStep(sessionId, 'morning')}
+      />
     </View>
   );
 }

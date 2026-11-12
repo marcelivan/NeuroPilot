@@ -1,12 +1,23 @@
+import { useEffect } from 'react';
 import { Tabs } from 'expo-router';
 import { Platform } from 'react-native';
+import { init } from '../../src/lib/db';
 
 export default function Layout() {
+  useEffect(() => {
+    init();
+  }, []);
+
   return (
-    <Tabs screenOptions={{
-      headerShown: false,
-      tabBarStyle: { paddingTop: 6, height: Platform.select({ ios: 92, default: 70 }) }
-    }}>
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          paddingTop: 6,
+          height: Platform.select({ ios: 92, default: 70 }),
+        },
+      }}
+    >
       <Tabs.Screen name="index" options={{ title: 'Home' }} />
       <Tabs.Screen name="morning" options={{ title: 'Morning' }} />
       <Tabs.Screen name="daytime" options={{ title: 'Day' }} />
