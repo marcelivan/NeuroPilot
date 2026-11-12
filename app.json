@@ -3,6 +3,5 @@
     "expo-router",
     "expo-sqlite",
     "expo-status-bar"
-  ],
-  "newArchEnabled": true
+  ]
 }
