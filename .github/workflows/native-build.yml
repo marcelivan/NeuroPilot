@@ -35,7 +35,6 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-          cache: gradle
       - run: npm ci
       - name: Generate Android project
         run: npx expo prebuild --clean --no-install --platform android
